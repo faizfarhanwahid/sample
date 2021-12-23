@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,9 +19,13 @@
 <h1><%= "My name is "+session.getAttribute("myName") +"@.@"%>
 </h1>
 <br/>
-<img src="https://scontent.xx.fbcdn.net/v/t39.30808-6/242308707_272067841307673_7701773599286327141_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFrSOXFUw20yHcF9Rk6BSKT4Cdj9r2F3H_gJ2P2vYXcfwl5kZnXuoQsjSVx8T8jK5hoHYMsALMf_drNCsFr2K-M&_nc_ohc=ca4-XTTM9X0AX9QWg9e&_nc_ht=scontent.xx&oh=bfadea35d456268fcf5a6a4f9e01d96c&oe=61B6CF5F"
+<img src="https://scontent.xx.fbcdn.net/v/t39.30808-6/242308707_272067841307673_7701773599286327141_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=p5agiYLEOJAAX-yo4no&_nc_ht=scontent.xx&oh=00_AT8WHzXKuflv5M3en9KCXqOrgzLh-Lly40HyjbnNtGGLNg&oe=61C89B9F"
      width=250 height=280>
 <br><br><br>
+<c:forTokens items="Kejayaan bermula dengan niat .Tiada usaha yang sia-sia" delims="." var="cuba">
+    <c:out value="${cuba}"/><br>
+</c:forTokens>
+<br><br>
 <a href="hello-servlet">Hello Servlet</a> <br>
 <a href="MyselfServlet">Myself Servlet</a> <br>
 <a href="MyfamilyServlet">Myfamily Servlet</a> <br>
